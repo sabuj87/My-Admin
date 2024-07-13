@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- External  CSS -->
+    <link rel="stylesheet" href="admin.css" />
+
+    <!-- Data Table -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.4/datatables.min.css"
+    />
+  </head>
+  <body>
+    <div id="content">
+
+  
+      <!-- side -->
+      <div class="fullbody">
+        <h2 style=" margin-bottom: 50px;" >Welcome Admin ! </h2>
+
+        <div class="login-container" >
+
+            <h3 style="font-weight: bold;padding-bottom: 20px;text-align: center;" >Sign in</h3>
+
+            <div style="position: relative;" class="input-container mt-2">
+
+
+                <i style="color: #879FFF;position: absolute;top: 49px;left: 15px;" class="fa-solid fa-envelope  me-2"></i>
+
+                <label style="color: rgb(136, 136, 136);" for="username">Email</label>
+
+                <input type="text"  placeholder="" class="login-input">
+
+            </div>
+
+
+            
+            <div style="position: relative;" class="input-container mt-2">
+
+
+                <i style="color: #879FFF;position: absolute;top: 49px;left: 15px;" class="fa-solid fa-key  me-2"></i>
+
+                <label style="color: rgb(136, 136, 136);" for="username">Password</label>
+
+                <input type="password"  placeholder="" class="login-input">
+
+            </div>
+
+            <p style="text-align: right;" class="mostSmall mt-2" ><a style="color: #879FFF;" href="#">Forgot Password?</a></p>
+
+            <button class="p-button mt-3">Sign in</button>
+            <p style="text-align: center;" class="mostSmall mt-2" ><a style="color: #879FFF;" href="#">or</a></p>
+
+            <div style="text-align: center; border: 1px solid #879FFF;border-radius: 10px;">
+
+                <img  style="height: 50px;width: 50px;" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="">
+
+                <span style="font-size: 90%;font-weight:bold;" >Sign in with Google</span>
+ 
+
+            </div>
+
+
+
+
+
+        </div>
+      
+
+        
+
+        <div style="position: absolute;top:0;left: 0;">
+
+            <img src="shape/shape1.png" alt="shape1">
+
+
+        </div>
+
+        <div style="position: absolute;bottom:0;right:  0;">
+
+            <img src="shape/shape2.png" alt="shape1">
+
+
+        </div>
+
+        <div style="position: absolute;top:60px;right:  0;">
+
+            <span style="color: #879FFF;margin-top: 100px; margin-right: 100px;" > <i class="fa-solid fa-circle-question"></i> Help</span>
+
+
+        </div>
+
+
+
+
+     
+    </div>
+
+    <!-- Script with CDN -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+
+
+
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.4/datatables.min.js"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#datatTable").DataTable();
+      });
+    </script>
+    <script>
+      
+
+      $(".parentmenu").click(function () {
+        $(".childmenu",this).toggleClass("show");
+        $("i",this).toggleClass("fa-angle-right fa-angle-down");
+
+      });
+      $(".parentmenu>.childmenu").click(function(e) {
+        e.stopPropagation();
+      });
+
+      var xValues = ["Italy", "France", "Spain", "USA", "Argentina", "Colombia", "Chile", "Brazil", "Peru", "Venezuela"];
+
+      var xValues2 = ["Italy", "France", "Spain", "USA"];
+
+var yValues = [55, 49, 44, 24, 15,23,20,28,56,5,];
+var yValues2 = [55, 49, 44, 24];
+
+var barColors = ["#CBD4E1", "#879FFF","#CBD4E1","#CBD4E1","#CBD4E1","#879FFF","#CBD4E1","#CBD4E1","#CBD4E1","#879FFF"];
+var barColors2 = ["#CBD4E1", "#879FFF","#CBD4E1","#CBD4E1"];
+
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      borderRadius: 5,
+      barThickness:60,
+      label: 'Revenue 2024',
+
+      options: {
+  
+  },
+
+   
+
+
+      data: yValues
+    }]
+  },
+
+ 
+
+});
+
+
+new Chart("myChart2", {
+  type: "bar",
+  data: {
+    labels: xValues2,
+    datasets: [{
+      backgroundColor: barColors2,
+      borderRadius: 5,
+      barThickness:40,
+      label: 'Performance ',
+
+      options: {
+  
+  },
+
+   
+
+
+      data: yValues2
+    }]
+  },
+
+ 
+
+});
+
+    </script>
+  </body>
+</html>
